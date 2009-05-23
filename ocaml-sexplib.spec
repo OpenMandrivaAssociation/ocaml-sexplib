@@ -1,5 +1,5 @@
 Name:           ocaml-sexplib
-Version:        4.2.7
+Version:        4.2.10
 Release:        %mkrel 1
 Summary:        OCaml library for converting OCaml values to S-expressions
 
