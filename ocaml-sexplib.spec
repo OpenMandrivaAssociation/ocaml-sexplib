@@ -1,6 +1,6 @@
 Name:           ocaml-sexplib
 Version:        4.2.12
-Release:        %mkrel 1
+Release:        %mkrel 2
 Summary:        OCaml library for converting OCaml values to S-expressions
 
 Group:          Development/Other
@@ -17,6 +17,8 @@ BuildRequires:  ocaml-findlib
 BuildRequires:  ocaml-type-conv >= 1.6.1
 BuildRequires:  camlp4
 BuildRequires:  dos2unix
+
+Requires:       ocaml-type-conv
 
 %description
 This library contains functionality for parsing and pretty-printing
