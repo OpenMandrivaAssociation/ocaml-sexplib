@@ -9,6 +9,7 @@ URL:            http://www.ocaml.info/home/ocaml_sources.html#sexplib310
 Source0:        http://hg.ocaml.info/release/sexplib310/archive/sexplib310-release-%{version}.tar.bz2
 # curl http://hg.ocaml.info/release/sexplib310/archive/release-%{version}.tar.bz2 > sexplib310-release-${version}.tar.bz2
 Patch0:         sexplib-4.0.1-unix-fix.patch
+Patch1:         sexplib-lib_test-makefile.patch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 
 BuildRequires:  ocaml >= 3.10.0
@@ -42,6 +43,9 @@ developing applications that use %{name}.
 %prep
 %setup -q -n sexplib310-release-%{version}
 %patch0 -p1
+# lib_test is used by check and test is installed with a patched Makefile
+cp -R lib_test test
+%patch1 -p0
 dos2unix LICENSE.Tywith
 
 %build
@@ -73,6 +77,7 @@ rm -rf %{buildroot}
 %files devel
 %defattr(-,root,root,-)
 %doc LICENSE LICENSE.Tywith COPYRIGHT README.txt
+%doc test/
 %{_libdir}/ocaml/sexplib/*.a
 %{_libdir}/ocaml/sexplib/*.cmxa
 %{_libdir}/ocaml/sexplib/*.mli
