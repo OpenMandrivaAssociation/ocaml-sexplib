@@ -1,0 +1,25 @@
+diff -u -r test/Makefile test_/Makefile
+--- test/Makefile	2009-07-28 16:57:44.000000000 +0200
++++ test_/Makefile	2009-09-12 03:06:32.000000000 +0200
+@@ -1,7 +1,8 @@
+-export OCAMLMAKEFILE = ../OCamlMakefile
++# This file is installed by the package "ocamlmakefile"
++export OCAMLMAKEFILE = /usr/share/ocamlmakefile/OCamlMakefile
+ 
+-export INCDIRS = ../lib
+-export LIBDIRS = ../lib
++export INCDIRS = +sexplib
++export LIBDIRS = +sexplib
+ export LIBS = sexplib
+ export PACKS = unix bigarray num
+ 
+Only in lib_test_/: Makefile~
+diff -u -r test/conv_test.ml test_/conv_test.ml
+--- test/conv_test.ml	2009-07-28 16:57:44.000000000 +0200
++++ test_/conv_test.ml	2009-09-12 02:58:15.000000000 +0200
+@@ -1,4 +1,4 @@
+-(*pp camlp4o -I ../lib -I `ocamlfind query type-conv` pa_type_conv.cmo pa_sexp_conv.cmo *)
++(*pp camlp4o -I `ocamlfind query sexplib` -I `ocamlfind query type-conv` pa_type_conv.cmo pa_sexp_conv.cmo *)
+ 
+ (* File: conv_test.ml
+ 
