@@ -4,7 +4,7 @@
 Summary:	OCaml library for converting OCaml values to S-expressions
 Name:		ocaml-sexplib
 Version:	4.2.17
-Release:	2
+Release:	3
 License:	LGPLv2+ with exceptions and BSD
 Group:		Development/Other
 Url:		http://www.ocaml.info/home/ocaml_sources.html#sexplib310
