@@ -7,7 +7,7 @@ Version:	4.2.17
 Release:	3
 License:	LGPLv2+ with exceptions and BSD
 Group:		Development/Other
-Url:		http://www.ocaml.info/home/ocaml_sources.html#sexplib310
+Url:		https://www.ocaml.info/home/ocaml_sources.html#sexplib310
 Source0:	http://hg.ocaml.info/release/sexplib310/archive/sexplib310-release-%{version}.tar.bz2
 # curl http://hg.ocaml.info/release/sexplib310/archive/release-%{version}.tar.bz2 > sexplib310-release-${version}.tar.bz2
 Patch0:		sexplib-4.0.1-unix-fix.patch
